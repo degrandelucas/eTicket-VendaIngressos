@@ -7,6 +7,11 @@ function comprar() {
   let tipoIngresso = document.getElementById("tipo-ingresso").value;
   let quantidade = parseInt(document.getElementById("qtd").value);
 
+  if (quantidade <= 0) {
+    alert("Quantidade inválida!");
+    return;
+  }
+
   //pegar os valores disponíveis para assento
   disponivelPista = parseInt(document.getElementById("qtd-pista").textContent);
   disponivelCadeiraSuperior = parseInt(
